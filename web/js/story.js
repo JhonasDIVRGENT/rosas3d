@@ -8,9 +8,10 @@ export const LINES = [
   "Para ser honesto, no sé cómo se mira en teléfonos ni si funciona, jejeje.",
   "Cuando estés triste, puedes entrar aquí a escuchar tu canción.",
   "Con mucho cariño, Jhonas ♥",
+  "Yo te amo en todos los universos",
 ];
 
-const FIRST_DELAY = 2600;   // ms tras abrir
+const FIRST_DELAY = 2600;   
 const FADE_MS = 1100;
 // tiempo en pantalla segun lo larga que sea la frase
 const lineMs = (text) => 4200 + text.length * 55;

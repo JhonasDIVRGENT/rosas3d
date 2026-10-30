@@ -104,7 +104,7 @@ const story = setupStory({
   },
 });
 
-// ---------------------------------------------------------------- modelo
+// --------------------------------------------------------------jhonas enserio estas haciendo esto ...
 const draco = new DRACOLoader().setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/gltf/");
 new GLTFLoader().setDRACOLoader(draco).load(
   "models/rosas.glb",
