@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para Karla Mariel</title>
+<meta name="description" content="Un ramo de rosas para Karla Mariel, de Jhonas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="stage"></div>
+
+<header id="dedication" aria-hidden="true">
+  <span class="to">Para Karla Mariel</span>
+  <span class="from">de Jhonas, con todo mi amor</span>
+</header>
+
+<p id="message" aria-live="polite"></p>
+
+<div id="controls">
+  <button id="mute" type="button" aria-pressed="false" title="Silenciar (M)">♪</button>
+  <button id="restart" type="button" title="Reiniciar (R)">↺ Reiniciar</button>
+</div>
+
+<p id="hint">Arrastra para girar el ramo · toca el cielo para lanzar fuegos</p>
+
+<section id="intro">
+  <p class="kicker">Un regalo para</p>
+  <h1>Karla Mariel</h1>
+  <p class="sub">de Jhonas</p>
+  <button id="open" type="button" disabled>Cargando rosas… 0%</button>
+  <p class="tip">Sube el volumen ♥</p>
+</section>
+
+<audio id="song" src="audio/cancion.mp3" preload="auto" loop></audio>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

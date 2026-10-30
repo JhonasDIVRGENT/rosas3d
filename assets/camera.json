@@ -1,0 +1,7 @@
+{
+  "_nota": "PROVISIONAL. Claude Desktop (Blender) debe sobrescribir con la camara real. Unidades = metros de Blender, Z arriba. hfov en grados (horizontal).",
+  "position": [0.0, -7.0, 2.5],
+  "target": [0.0, 0.0, 1.0],
+  "hfov_deg": 35.0,
+  "bouquet_center": [0.0, 0.0, 1.0]
+}

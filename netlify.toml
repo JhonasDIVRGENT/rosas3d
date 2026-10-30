@@ -1,0 +1,13 @@
+# Sitio estatico: Netlify publica la carpeta web/ tal cual (no hay paso de build).
+[build]
+  publish = "web"
+
+[[headers]]
+  for = "/models/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Blender: copias de seguridad automaticas
+*.blend1
+
+# Resultados regenerables (pesados): se crean con los scripts de src/
+assets/render/
+assets/layers/
+assets/out/
+assets/logs/
+
+# Cancion original (la web usa la copia web/audio/cancion.mp3)
+assets/audio/
+
+# Modelo original (OBJ + zip, ~27 MB); la web usa web/models/rosas.glb
+assets/models/pink-rose/source/
+
+# Configuracion local de herramientas
+.claude/
+.vscode/
