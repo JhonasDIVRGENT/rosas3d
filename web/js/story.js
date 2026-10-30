@@ -8,7 +8,7 @@ export const LINES = [
   "Para ser honesto, no sé cómo se mira en teléfonos ni si funciona, jejeje.",
   "Cuando estés triste, puedes entrar aquí a escuchar tu canción.",
   "Con mucho cariño, Jhonas ♥",
-  "Yo te amo en todos los universos",
+  "Siento sentimientos positivos hacia ti ",
 ];
 
 const FIRST_DELAY = 2600;   
