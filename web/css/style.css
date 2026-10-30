@@ -46,9 +46,9 @@ html, body {
 #message.show { opacity: 1; transform: none; }
 #message.signature { font-family: "Great Vibes", cursive; font-style: normal; font-size: clamp(2rem, 4.6vw, 3rem); color: var(--blush); }
 
-/* ---------- controles ---------- */
+/* ---------- controles (abajo a la izquierda: la esquina derecha la ocupa el sello de Netlify) ---------- */
 #controls {
-  position: fixed; right: 16px; bottom: max(16px, env(safe-area-inset-bottom));
+  position: fixed; left: 16px; bottom: max(16px, env(safe-area-inset-bottom));
   display: flex; gap: 8px; opacity: 0; pointer-events: none; transition: opacity 1s ease 2s;
 }
 .opened #controls { opacity: 1; pointer-events: auto; }
@@ -65,8 +65,8 @@ button:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
 #mute[aria-pressed="true"] { opacity: .55; text-decoration: line-through; }
 
 #hint {
-  position: fixed; left: 16px; bottom: max(22px, env(safe-area-inset-bottom)); margin: 0; max-width: calc(100% - 240px);
-  font-size: .95rem; font-style: italic; opacity: 0; pointer-events: none; transition: opacity 1.5s ease;
+  position: fixed; left: 16px; right: 16px; top: calc(max(18px, env(safe-area-inset-top)) + 92px); margin: 0;
+  text-align: center; font-size: .95rem; font-style: italic; opacity: 0; pointer-events: none; transition: opacity 1.5s ease;
 }
 .opened #hint { opacity: .55; }
 .opened.hint-done #hint { opacity: 0; }
@@ -93,7 +93,8 @@ button:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
 
 @media (max-width: 560px) {
   #hint { display: none; }
-  #controls { left: 16px; justify-content: center; }
+  #restart .label { display: none; }
+  #restart { min-width: 44px; }
   #message { bottom: max(76px, calc(env(safe-area-inset-bottom) + 68px)); }
 }
 
