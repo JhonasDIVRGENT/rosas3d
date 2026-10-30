@@ -1,19 +1,19 @@
 // Portada, musica en bucle, frases y controles (silenciar / reiniciar).
 
 export const LINES = [
-  "Karla Mariel…",
-  "Cada rosa de este ramo guarda un instante contigo, y aun así me faltan rosas para todo lo que siento.",
-  "Si esta noche el cielo se enciende, es porque mi corazón no sabe latir de otra forma cuando pienso en ti.",
-  "Eres mi calma, mi alegría y el lugar al que siempre quiero volver.",
-  "Contigo aprendí que el amor no se explica: se cuida, se riega y florece cada día.",
-  "Gracias por tu sonrisa, por tu paciencia y por dejarme caminar a tu lado.",
-  "Te amo hoy, mañana y en todas las canciones que todavía nos faltan por escuchar.",
-  "Con todo mi amor, Jhonas ♥",
+  "Karla, este es el regalo en el que estuve trabajando hace días. No fue fácil hacerlo.",
+  "Solo agradezco la coincidencia de conocernos.",
+  "Quiero que sepas que te amo mucho.",
+  "Creo que cada pétalo significa cada conversación que tengo contigo: cada «buenos días», cada «buenas noches», cada «no sabes qué pasó».",
+  "Para ser honesto, no sé cómo se mira en teléfonos ni si funciona, jejeje.",
+  "Cuando estés triste, puedes entrar aquí a escuchar tu canción.",
+  "Con mucho cariño, Jhonas ♥",
 ];
 
 const FIRST_DELAY = 2600;   // ms tras abrir
-const LINE_MS = 7200;       // tiempo por frase
 const FADE_MS = 1100;
+// tiempo en pantalla segun lo larga que sea la frase
+const lineMs = (text) => 4200 + text.length * 55;
 
 export function setupStory({ onOpen, onRestart, onLine }) {
   const $ = (id) => document.getElementById(id);
@@ -38,7 +38,8 @@ export function setupStory({ onOpen, onRestart, onLine }) {
   function playLines() {
     stop();
     msg.classList.remove("show");
-    LINES.forEach((_, i) => later(() => show(i), FIRST_DELAY + i * LINE_MS));
+    let at = FIRST_DELAY;
+    LINES.forEach((text, i) => { later(() => show(i), at); at += lineMs(text); });
     later(() => document.body.classList.add("hint-done"), 12000);
   }
 
